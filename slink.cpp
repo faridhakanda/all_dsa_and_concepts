@@ -6,6 +6,9 @@ typedef struct node {
     struct node *next;
 } Node;
 
+
+void insert_at_beginning(Node *node, int data);
+
 int main() {
 
     return 0;
