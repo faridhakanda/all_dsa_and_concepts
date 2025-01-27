@@ -7,6 +7,7 @@ typedef struct node {
 } Node;
 
 
+
 void insert_at_beginning(Node *node, int data);
 void insert_at_end(Node *node, int data);
 void insert_at_middle(Node *node, int position, int data);
