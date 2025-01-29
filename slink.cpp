@@ -14,7 +14,10 @@ void insert_at_middle(Node *node, int position, int data);
 void delete_beginning(Node *head);
 void delete_end(Node *head);
 void delete_middle(Node *head, int data);
+int search(Node *head, int data);
 int main() {
 
     return 0;
 }
+
+//git remote set-url origin https://github.com/faridhakanda/all_dsa_and_concepts.git
