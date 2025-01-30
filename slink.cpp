@@ -15,6 +15,7 @@ void delete_beginning(Node *head);
 void delete_end(Node *head);
 void delete_middle(Node *head, int data);
 int search(Node *head, int data);
+void reverse(Node *head);
 int main() {
 
     return 0;
