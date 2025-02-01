@@ -6,6 +6,7 @@ typedef struct node {
     struct node *next;
 } Node;
 
+
 Node *create_list(int data) {
     Node *head = NULL, *temp = NULL, *current = NULL;
     temp = (Node *)malloc(sizeof(Node));
@@ -21,6 +22,15 @@ Node *create_list(int data) {
         
     }
 }
+
+void printList(Node *head) {
+    while (head != NULL) {
+        cout<<head->data<<"->";
+        head = head->next;
+    }
+    cout<<"Null"<<endl;
+}
+
 void insert_at_beginning(Node *node, int data);
 void insert_at_end(Node *node, int data);
 void insert_at_middle(Node *node, int position, int data);
