@@ -19,8 +19,11 @@ Node *create_list(int data) {
         while (head != NULL) {
             head = head->next;
         }
-        
+        head->next = temp;
+        current = temp;
+        current = current->next;
     }
+    return head;
 }
 
 void printList(Node *head) {
@@ -31,17 +34,54 @@ void printList(Node *head) {
     cout<<"Null"<<endl;
 }
 
-void insert_at_beginning(Node *node, int data);
-void insert_at_end(Node *node, int data);
-void insert_at_middle(Node *node, int position, int data);
+void insert_at_beginning(Node *head, int data) {
+    Node *current = (Node *)malloc(sizeof(Node));
+    current->data = data;
+    current->next = head;
+    head = current;
+    printList(head);
+}
+void insert_at_end(Node *head, int data) {
+    Node *current = head;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    current->next = newNode;
+    current = newNode;
+    printList(head);
+}
+void insert_at_middle(Node *head, int position, int data) {
+    Node *current = head;
+    int index = 0;
+    while (current->next != NULL) {
+        index++;
+        if (index == position) {
+            Node *newNode = (Node *)malloc(sizeof(Node));
+            newNode->data = data;
+            newNode->next = current->next;
+            current->next = newNode;
+        }
+        current = current->next;
+    }
+    printList(head);
+}
 void delete_beginning(Node *head);
 void delete_end(Node *head);
 void delete_middle(Node *head, int data);
 int search(Node *head, int data);
 void reverse(Node *head);
 int main() {
-
+    Node *head;
+    head = create_list(1);
+    
+    insert_at_beginning(head, 2);
+    insert_at_end(head, 9);
+    insert_at_end(head, 11);
+    insert_at_middle(head, 1, 11);
+    
     return 0;
 }
 
-//git remote set-url origin https://github.com/faridhakanda/all_dsa_and_concepts.git
