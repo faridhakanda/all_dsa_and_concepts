@@ -6,6 +6,21 @@ typedef struct node {
     struct node *next;
 } Node;
 
+Node *create_list(int data) {
+    Node *head = NULL, *temp = NULL, *current = NULL;
+    temp = (Node *)malloc(sizeof(Node));
+    temp->data = data;
+    temp->next = NULL;
+    if (head == NULL) {
+        head = temp;
+        current = temp;
+    } else {
+        while (head != NULL) {
+            head = head->next;
+        }
+        
+    }
+}
 void insert_at_beginning(Node *node, int data);
 void insert_at_end(Node *node, int data);
 void insert_at_middle(Node *node, int position, int data);
