@@ -7,6 +7,7 @@ typedef struct node {
     struct node *next;
 } Node;
 
+void print_list(Node *head);
 int main() {
 
     return 0;
