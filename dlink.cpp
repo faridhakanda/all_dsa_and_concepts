@@ -11,6 +11,8 @@ typedef struct node {
 Node *create_list(int data) {
     Node *head = NULL, *temp = NULL, *current = NULL;
 }
+
+void print_list(Node *head);
 int main() {
     
     return 0;
