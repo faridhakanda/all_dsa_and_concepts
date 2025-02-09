@@ -1,3 +1,5 @@
+// bubble sort implementation
+// update every day in the repo of my github
 #include <bits/stdc++.h>
 using namespace std;
 
