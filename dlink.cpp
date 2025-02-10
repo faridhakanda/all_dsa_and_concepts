@@ -13,6 +13,9 @@ Node *create_list(int data) {
 }
 
 void print_list(Node *head);
+
+void insertAtBeginning(Node *head, int data);
+
 int main() {
     
     return 0;
