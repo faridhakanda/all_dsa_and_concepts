@@ -68,7 +68,13 @@ void insert_at_middle(Node *head, int position, int data) {
     }
     printList(head);
 }
-void delete_beginning(Node *head);
+void delete_beginning(Node *head) {
+    Node *current = (Node *)malloc(sizeof(Node));
+    current = head;
+    head = head->next;
+    free(current);
+    printList(head);
+}
 void delete_end(Node *head);
 void delete_middle(Node *head, int data);
 int search(Node *head, int data);
@@ -81,6 +87,8 @@ int main() {
     insert_at_end(head, 9);
     insert_at_end(head, 11);
     insert_at_middle(head, 1, 11);
+
+    delete_beginning(head);
     
     return 0;
 }
