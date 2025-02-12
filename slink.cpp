@@ -77,7 +77,17 @@ void delete_beginning(Node *head) {
 }
 void delete_end(Node *head);
 void delete_middle(Node *head, int data);
-int search(Node *head, int data);
+int search(Node *head, int data) {
+    int index = 0;
+    while (head != NULL) {
+        if (head->data == data) {
+            return index;
+        }
+        head = head->next;
+        index++;
+    }
+    return -1;
+}
 void reverse(Node *head);
 int main() {
     Node *head;
@@ -88,7 +98,9 @@ int main() {
     insert_at_end(head, 11);
     insert_at_middle(head, 1, 11);
 
-    delete_beginning(head);
+    //delete_beginning(head);
+
+    cout<<search(head, 1)<<endl;
     
     return 0;
 }
