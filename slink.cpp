@@ -75,7 +75,18 @@ void delete_beginning(Node *head) {
     free(current);
     printList(head);
 }
-void delete_end(Node *head);
+void delete_end(Node *head) {
+    Node *current = (Node *)malloc(sizeof(Node));
+    current->next = head;
+    Node *temp = current;
+    while (current->next != NULL) {
+        temp = current;
+        current = current->next;
+    }
+    temp->next = NULL;
+    free(current);
+    printList(head);
+}
 void delete_middle(Node *head, int data);
 int search(Node *head, int data) {
     int index = 0;
@@ -99,8 +110,9 @@ int main() {
     insert_at_middle(head, 1, 11);
 
     //delete_beginning(head);
-
-    cout<<search(head, 1)<<endl;
+    delete_end(head);
+    
+    //cout<<search(head, 1)<<endl;
     
     return 0;
 }
