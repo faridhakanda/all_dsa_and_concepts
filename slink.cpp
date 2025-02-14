@@ -99,7 +99,17 @@ int search(Node *head, int data) {
     }
     return -1;
 }
-void reverse(Node *head);
+void reverse(Node *head) {
+    Node *next = NULL, *prev = NULL;
+    while (head != NULL) {
+        next = head->next;
+        head->next = prev;
+        prev = head;
+        head = next;
+    }
+    head = prev;
+    printList(head);
+}
 int main() {
     Node *head;
     head = create_list(1);
@@ -110,7 +120,9 @@ int main() {
     insert_at_middle(head, 1, 11);
 
     //delete_beginning(head);
-    delete_end(head);
+    //delete_end(head);
+
+    reverse(head);
     
     //cout<<search(head, 1)<<endl;
     
