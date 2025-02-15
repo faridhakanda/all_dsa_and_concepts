@@ -87,7 +87,20 @@ void delete_end(Node *head) {
     free(current);
     printList(head);
 }
-void delete_middle(Node *head, int data);
+void delete_middle(Node *head, int data) {
+    Node *current = (Node *)malloc(sizeof(Node));
+    current->next = head;
+    Node *temp = current;
+    while(temp->next != NULL) {
+        if(temp->next->data == data) {
+            temp->next = temp->next->next;
+            break;
+        }
+        temp = temp->next;
+    }
+    free(current);
+    printList(head);
+}
 int search(Node *head, int data) {
     int index = 0;
     while (head != NULL) {
@@ -121,8 +134,9 @@ int main() {
 
     //delete_beginning(head);
     //delete_end(head);
+    delete_middle(head, 11);
 
-    reverse(head);
+    //reverse(head);
     
     //cout<<search(head, 1)<<endl;
     
