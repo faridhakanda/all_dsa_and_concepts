@@ -1,3 +1,5 @@
+// singly linked list
+// implementation using cpp
 #include <bits/stdc++.h>
 using namespace std;
 
