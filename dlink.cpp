@@ -14,7 +14,15 @@ Node *create_list(int data) {
 
 void print_list(Node *head);
 
+// inserting data in the doubly linked list
 void insertAtBeginning(Node *head, int data);
+void insertAtMiddle(Node *head, int position, int data);
+void insertAtEnd(Node *head, int data);
+
+// deleting data in the doubly linked list
+void deleteBeginning(Node *head);
+void deleteMiddle(Node *head, int data);
+void deleteEnd(Node *head);
 
 int main() {
     
