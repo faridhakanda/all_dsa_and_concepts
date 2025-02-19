@@ -24,7 +24,17 @@ void deleteBeginning(Node *head);
 void deleteMiddle(Node *head, int data);
 void deleteEnd(Node *head);
 
-int search(Node *head, int data);
+int search(Node *head, int data) {
+    int index = 0;
+    while (head != NULL) {
+        if (head->data == data) {
+            return index;
+        }
+        index++;
+        head = head->next;
+    }
+    return -1;
+}
 void reverse(Node *head);
 
 int main() {
