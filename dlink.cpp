@@ -12,7 +12,9 @@ Node *create_list(int data) {
     Node *head = NULL, *temp = NULL, *current = NULL;
 }
 
-void print_list(Node *head);
+void print_list(Node *head){
+
+}
 
 // inserting data in the doubly linked list
 void insertAtBeginning(Node *head, int data);
