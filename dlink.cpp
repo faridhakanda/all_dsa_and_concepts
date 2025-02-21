@@ -13,7 +13,11 @@ Node *create_list(int data) {
 }
 
 void print_list(Node *head){
-
+    while (head != NULL) {
+        cout<<head->data<<"->";
+        head = head->next;
+    }
+    cout<<"NULL"<<endl;
 }
 
 // inserting data in the doubly linked list
