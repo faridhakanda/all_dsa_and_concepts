@@ -1,5 +1,5 @@
 // fast and slow pointer
-// with linked list
+// with linked list implementation
 #include <bits/stdc++.h>
 using namespace std;
 
