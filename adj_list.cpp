@@ -3,6 +3,11 @@
 
 using namespace std;
 
+typedef struct edge {
+    int edge;
+    struct edge *next;
+} Edge;
+
 int main() {
     
     return 0;
