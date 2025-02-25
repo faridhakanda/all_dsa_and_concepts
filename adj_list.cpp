@@ -8,6 +8,11 @@ typedef struct edge {
     struct edge *next;
 } Edge;
 
+
+typedef struct graph {
+    
+} Graph;
+
 int main() {
     
     return 0;
