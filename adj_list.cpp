@@ -13,7 +13,9 @@ typedef struct graph {
     
 } Graph;
 
-Graph *createGraph(int V);
+Graph *createGraph(int V) {
+    int val;
+}
 
 int main() {
     
