@@ -17,7 +17,7 @@ Graph *createGraph(int V) {
     int val;
 }
 
-
+void printGraph(Graph *g);
 int main() {
     
     return 0;
