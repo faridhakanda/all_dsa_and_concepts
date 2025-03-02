@@ -3,6 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 typedef struct edge {
     int data;
     struct edge *next;
