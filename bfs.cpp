@@ -9,6 +9,10 @@ typedef struct edge {
     struct edge *next;
 } Edge;
 
+typedef struct graph {
+    int vertex;
+    Edge *edge;
+} Graph;
 int main() {
 
     return 0;
