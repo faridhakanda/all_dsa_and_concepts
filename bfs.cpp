@@ -9,6 +9,6 @@ typedef struct edge {
 } Edge;
 
 int main() {
-
+    
     return 0;
 }
